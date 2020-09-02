@@ -2,19 +2,14 @@ root = true
 
 [*]
 charset = utf-8
-indent_size = 4
-indent_style = space
-trim_trailing_whitespace = false
-insert_final_newline = false
-
-[*.{json}]
-indent_size = 2
-indent_style = space
 trim_trailing_whitespace = true
-
-[*.{py}]
-trim_trailing_whitespace = true
-insert_final_newline = true
+end_of_line = lf
 
 [Makefile]
 indent_style = tab
+
+[*.{c, h, cpp, hpp}]
+indent_size = 2
+
+[*.{py}]
+insert_final_newline = true
