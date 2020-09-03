@@ -17,10 +17,8 @@ int dec2bin(int decimal_number)
   while (decimal_number > 0)
   {
     remainder = decimal_number % 2;
-    //printf("%d\n", remainder);
     decimal_number /= 2;
     binary_number += remainder * temp;
-    //printf("%d\n", remainder * temp);
     temp *= 10;
   }
 
