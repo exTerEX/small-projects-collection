@@ -1,12 +1,13 @@
 #include <assert.h>
 
 int factorial(int);
-int test_factorial(void);
+int test_factorial();
 
 int main(int argc, char *argv[])
 {
   // TODO: Implement script interaction.
   // TODO: Implement support for arbitrary high numbers.
+  test_factorial();
 }
 
 int factorial(int n)
@@ -23,7 +24,7 @@ int factorial(int n)
   return product;
 }
 
-int test_factorial(void)
+int test_factorial()
 {
   assert(factorial(5) == 120);
   assert(factorial(10) == 3628800);

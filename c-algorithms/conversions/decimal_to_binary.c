@@ -2,7 +2,7 @@
 #include <assert.h>
 
 int dec2bin(int);
-int test_dec2bin(void);
+int test_dec2bin();
 
 int main(int argc, char *argv[])
 {
@@ -25,7 +25,7 @@ int dec2bin(int decimal_number)
   return binary_number;
 }
 
-int test_dec2bin(void)
+int test_dec2bin()
 {
   int n1 = 21, n2 = 1, n3 = 14, n4 = 0, n5 = 1000, n6 = 123;
 

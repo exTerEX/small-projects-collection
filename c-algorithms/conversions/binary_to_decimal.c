@@ -4,11 +4,12 @@
 
 bool is_binary(int);
 int bin2dec(int);
-int test_bin2dec(void);
+int test_bin2dec();
 
 int main(int argc, char *argv[])
 {
   // TODO: Implement script interaction.
+  test_bin2dec();
 }
 
 // TODO: Make function standalon for reusability
@@ -48,7 +49,7 @@ int bin2dec(int binary_number)
   return decimal_number;
 }
 
-int test_bin2dec(void)
+int test_bin2dec()
 {
   int n1 = 1010, n2 = 1, n3 = 1234, n4 = 0, n5 = 11111, n6 = 111;
 

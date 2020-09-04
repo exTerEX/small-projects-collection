@@ -2,9 +2,9 @@
 #include <assert.h>
 
 int fibonnacci(int);
-void test_fibonnacci(void);
+void test_fibonnacci();
 
-int main()
+int main(int argc, char *argv[])
 {
   // TODO: Implement script interaction.
 }
@@ -26,7 +26,7 @@ int fibonnacci(int n)
   }
 }
 
-void test_fibonnacci(void)
+void test_fibonnacci()
 {
   assert(fibonnacci(16) == 987);
   assert(fibonnacci(3) == 2);

@@ -4,7 +4,7 @@
 #include <assert.h>
 
 bool is_palindrome(int);
-void test_is_palindrome(void);
+void test_is_palindrome();
 
 int main(int argc, char *argv[])
 {
@@ -26,7 +26,7 @@ bool is_palindrome(int number)
   return original == reversed;
 }
 
-void test_is_palindrome(void)
+void test_is_palindrome()
 {
   assert(is_palindrome(0) == true);
   assert(is_palindrome(123454321) == true);
