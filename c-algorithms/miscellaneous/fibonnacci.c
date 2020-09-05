@@ -7,6 +7,7 @@ void test_fibonnacci();
 int main(int argc, char *argv[])
 {
   // TODO: Implement script interaction.
+  test_fibonnacci();
 }
 
 int fibonnacci(int n)
