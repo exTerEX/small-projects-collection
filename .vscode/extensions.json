@@ -4,7 +4,6 @@
         "ms-vscode.cpptools",
         "ms-vscode.cmake-tools",
         "editorconfig.editorconfig",
-        "ms-python.python",
-        "ikuyadeu.r"
+        "ms-python.python"
     ]
 }
