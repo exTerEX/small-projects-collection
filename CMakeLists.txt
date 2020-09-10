@@ -23,12 +23,12 @@ if(NOT HAS_STDBOOL_H)
 endif()
 
 # Check if subdirectories exist and add.
-if(IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/c-algorithms")
-  add_subdirectory("c-algorithms")
+if(IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/c-projects")
+  add_subdirectory("c-projects")
 endif()
 
-if(IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/cpp-algorithms")
-  add_subdirectory("cpp-algorithms")
+if(IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/cpp-projects")
+  add_subdirectory("cpp-projects")
 endif()
 
 # Enable tool to generate binary distribution files
