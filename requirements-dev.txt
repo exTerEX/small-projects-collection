@@ -1,4 +1,4 @@
---requirement requirement.txt
+--requirement requirements.txt
 
 pytest
 yapf
