@@ -4,7 +4,7 @@
 
 bool is_binary(int);
 int bin2dec(int);
-int test_bin2dec();
+void test_bin2dec();
 
 int main(int argc, char *argv[])
 {
@@ -49,7 +49,7 @@ int bin2dec(int binary_number)
   return decimal_number;
 }
 
-int test_bin2dec()
+void test_bin2dec()
 {
   int n1 = 1010, n2 = 1, n3 = 1234, n4 = 0, n5 = 11111, n6 = 111;
 
