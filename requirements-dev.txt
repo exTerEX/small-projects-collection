@@ -6,3 +6,4 @@ pylint
 pydocstyle
 sphinx
 cmake_format
+pre-commit
