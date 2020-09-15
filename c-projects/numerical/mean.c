@@ -1,3 +1,4 @@
+/* mean.c */
 
 #include <stdlib.h>
 #include <assert.h>
