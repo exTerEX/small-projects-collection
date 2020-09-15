@@ -14,7 +14,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED YES)
 
 # Check for some required header files
 include(CheckIncludeFile)
-include(CheckSymbolExists)
 
 check_include_file(stdbool.h HAS_STDBOOL_H)
 
