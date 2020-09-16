@@ -1,3 +1,7 @@
+enable_language(C)
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD_REQUIRED YES)
+
 if(IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/miscellaneous")
   add_subdirectory("miscellaneous")
 endif()
