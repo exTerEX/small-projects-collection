@@ -1,0 +1,13 @@
+{
+  "name": "go-projects",
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+  "settings": {},
+  "service": "go-projects",
+  "extensions": [
+   "golang.go"
+  ],
+  "workspaceFolder": "/workspace/go-projects",
+  "postCreateCommand": ""
+}

@@ -1,10 +1,4 @@
-### Code ###
-
-.vscode/*
-*.code-workspace
-
 ### C ###
-
 # Prerequisites
 *.d
 
@@ -59,15 +53,8 @@ Mkfile.old
 dkms.conf
 
 ### C++ ###
-
-# Prerequisites
-
 # Compiled Object files
 *.slo
-
-# Precompiled Headers
-
-# Compiled Dynamic libraries
 
 # Fortran module files
 *.mod
@@ -92,12 +79,24 @@ CTestTestfile.cmake
 _deps
 
 ### CMake Patch ###
-
 # External projects
 *-prefix/
 
-### Python ###
+### Go ###
+# Binaries for programs and plugins
+*.exe~
 
+# Test binary, built with `go test -c`
+*.test
+
+# Dependency directories (remove the comment below to include it)
+vendor/
+
+### Go Patch ###
+/vendor/
+/Godeps/
+
+### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -108,6 +107,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
+bin/
 develop-eggs/
 dist/
 downloads/
@@ -204,6 +204,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+pythonenv*
 
 # Spyder project settings
 .spyderproject
@@ -225,3 +226,60 @@ dmypy.json
 
 # pytype static type analyzer
 .pytype/
+
+# profiling data
+.prof
+
+### R ###
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data files
+.RData
+
+# User-specific files
+.Ruserdata
+
+# Example code in package build process
+*-Ex.R
+
+# Output files from R CMD build
+/*.tar.gz
+
+# Output files from R CMD check
+/*.Rcheck/
+
+# RStudio files
+.Rproj.user/
+
+# produced vignettes
+vignettes/*.html
+vignettes/*.pdf
+
+# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+.httr-oauth
+
+# knitr and R markdown default cache directories
+*_cache/
+/cache/
+
+# Temporary files created by R markdown
+*.utf8.md
+*.knit.md
+
+# R Environment Variables
+.Renviron
+
+### R.Bookdown Stack ###
+# R package: bookdown caching files
+/*_files/
+
+### vscode ###
+.vscode/*
+**/.vscode
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace

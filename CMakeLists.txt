@@ -1,15 +1,13 @@
 cmake_minimum_required(VERSION 3.6)
 
-project(small_projects LANGUAGES C CXX)
+project(small_projects LANGUAGES CXX)
 
 # Set output directories
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin/lib)
 
 # Set compilation standards
-set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_C_STANDARD_REQUIRED YES)
 set(CMAKE_CXX_STANDARD_REQUIRED YES)
 
 # Check for some required header files
@@ -23,10 +21,6 @@ if(NOT HAS_STDBOOL_H)
 endif()
 
 # Check if subdirectories exist and add.
-if(IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/c-projects")
-  add_subdirectory("c-projects")
-endif()
-
 if(IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/cpp-projects")
   add_subdirectory("cpp-projects")
 endif()

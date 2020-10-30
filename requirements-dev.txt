@@ -1,7 +1,0 @@
---requirement requirement.txt
-
-pytest
-yapf
-pylint
-pydocstyle
-sphinx

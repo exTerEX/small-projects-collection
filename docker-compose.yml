@@ -1,0 +1,22 @@
+version: "3"
+services:
+    c-projects:
+        image: gcc:latest
+        volumes:
+            - .:/workspace:cached
+        command: /bin/sh -c "while sleep 1000; do :; done"
+    python-projects:
+        image: python:latest
+        volumes:
+            - .:/workspace:cached
+        command: /bin/sh -c "while sleep 1000; do :; done"
+    go-projects:
+        image: golang:latest
+        volumes:
+            - .:/workspace:cached
+        command: /bin/sh -c "while sleep 1000; do :; done"
+    r-projects:
+        image: r-base:latest
+        volumes:
+            - .:/workspace:cached
+        command: /bin/sh -c "while sleep 1000; do :; done"
