@@ -3,8 +3,8 @@ cmake_minimum_required(VERSION 3.6)
 project(small_projects LANGUAGES CXX)
 
 # Set output directories
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin/${CMAKE_SYSTEM_NAME})
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin/${CMAKE_SYSTEM_NAME}/lib)
 
 # Set compilation standards
 set(CMAKE_CXX_STANDARD 20)
@@ -12,7 +12,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED YES)
 
 # Check for some required header files
 include(CheckIncludeFile)
-include(CheckSymbolExists)
 
 check_include_file(stdbool.h HAS_STDBOOL_H)
 
