@@ -6,7 +6,8 @@
   "settings": {},
   "service": "go-projects",
   "extensions": [
-   "golang.go"
+   "golang.go",
+   "editorconfig.editorconfig"
   ],
   "workspaceFolder": "/workspace/go-projects",
   "postCreateCommand": ""
