@@ -1,9 +1,2 @@
---requirement requirements.txt
-
-pytest
-yapf
-pylint
-pydocstyle
-sphinx
 cmake_format
 pre-commit
