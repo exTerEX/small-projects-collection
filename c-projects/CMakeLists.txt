@@ -37,7 +37,6 @@ if(IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/conversions")
   add_subdirectory("conversions")
 endif()
 
-
 # Enable tool to generate binary distribution files
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

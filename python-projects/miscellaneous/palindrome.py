@@ -1,27 +1,4 @@
-"""palindrome.py"""
-import pytest
-
-
 def is_palindrome(sequence: str, /, start: int = None, end: int = None) -> bool:
-    """Check if the sequence is a palindrome or not.
-
-    Args:
-        sequence (str): A sequence to be checked.
-        start (int, optional): Start index to where to check if sequence is a palindrome. Defaults to None.
-        end (int, optional): End index to where to check if sequence is a palindrome. Defaults to None.
-
-    Raises:
-        ValueError: Raised if sequence isn't of type 'str'.
-        ValueError: Raised if start is <= 0.
-        ValueError: Raised if start is > len(sequence).
-        ValueError: Raised if end is < 0.
-        ValueError: Raised if end is >= len(sequence).
-        ValueError: Raised if start > end.
-
-    Returns:
-        bool: Return true if (limited) sequence is palindrome or false if not a palindrome.
-    """
-
     if not isinstance(sequence, str):
         raise ValueError(f"Sequence must be string")
 
@@ -56,8 +33,6 @@ def test_is_palindrome():
     assert(is_palindrome("ABBA", end=2) == False)
     assert(is_palindrome("ABBA") == True)
     assert(is_palindrome("ABBA", start=0, end=4) == True)
-    with pytest.raises(Exception):
-        assert is_palindrome("ABBA", start=3, end=2)
 
 
 def find_palindrome(sequence: str) -> tuple:
@@ -88,3 +63,8 @@ def find_palindrome(sequence: str) -> tuple:
 def test_find_palindrome():
     assert(find_palindrome("forgeeksskeegfor") == (
         'geeksskeeg', 'eeksskee', 'eksske', 'kssk'))
+
+
+if __name__ == "__main__":
+    test_is_palindrome()
+    test_find_palindrome()

@@ -5,6 +5,11 @@ services:
         volumes:
             - .:/workspace:cached
         command: /bin/sh -c "while sleep 1000; do :; done"
+    cpp-projects:
+        image: gcc:latest
+        volumes:
+            - .:/workspace:cached
+        command: /bin/sh -c "while sleep 1000; do :; done"
     python-projects:
         image: python:latest
         volumes:
