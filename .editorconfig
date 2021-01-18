@@ -2,14 +2,27 @@ root = true
 
 [*]
 charset = utf-8
-trim_trailing_whitespace = true
 end_of_line = lf
-
-[Makefile]
-indent_style = tab
+indent_size = 4
 
 [*.{c, h, cpp, hpp}]
-indent_size = 4
+trim_trailing_whitespace = true
 
 [*.{py}]
 insert_final_newline = true
+trim_trailing_whitespace = true
+
+[.vscode/*.json]
+indent_style = tab
+indent_size = 4
+
+[**/.devcontainer.json]
+indent_style = tab
+indent_size = 4
+
+[.github/workflows/*.yml]
+indent_style = space
+indent_size = 2
+
+[*.{md,rst}]
+trim_trailing_whitespace = false
