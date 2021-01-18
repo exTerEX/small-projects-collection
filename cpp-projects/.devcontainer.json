@@ -1,16 +1,16 @@
 {
-	"name": "c-projects",
+	"name": "cpp-projects",
 	"dockerComposeFile": [
 		"../docker-compose.yml"
 	],
 	"settings": {},
-	"service": "c-projects",
+	"service": "cpp-projects",
 	"extensions": [
 		"ms-vscode.cpptools",
 		"ms-vscode.cmake-tools",
 		"twxs.cmake",
 		"editorconfig.editorconfig"
 	],
-	"workspaceFolder": "/workspace/c-projects",
+	"workspaceFolder": "/workspace/cpp-projects",
 	"postCreateCommand": "apt update && apt -y install cmake ninja-build"
 }

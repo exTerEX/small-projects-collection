@@ -1,14 +1,14 @@
 {
-  "name": "go-projects",
-  "dockerComposeFile": [
-    "../docker-compose.yml"
-  ],
-  "settings": {},
-  "service": "go-projects",
-  "extensions": [
-   "golang.go",
-   "editorconfig.editorconfig"
-  ],
-  "workspaceFolder": "/workspace/go-projects",
-  "postCreateCommand": ""
+	"name": "go-projects",
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"settings": {},
+	"service": "go-projects",
+	"extensions": [
+		"golang.go",
+		"editorconfig.editorconfig"
+	],
+	"workspaceFolder": "/workspace/go-projects",
+	"postCreateCommand": ""
 }

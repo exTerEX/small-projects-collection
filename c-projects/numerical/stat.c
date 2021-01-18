@@ -1,37 +1,27 @@
-///
-/// \brief Definition for statistical algorithms.
-///
-
 #include <stdio.h>
 #include <assert.h>
 #include <math.h>
 
 // --- Function definitions
 double mean(double *, unsigned int);
+double variance(double *data, unsigned int n);
 double sd(double *, unsigned int);
 double sum(double *, unsigned int);
-double median(double *, int);
-
-// --- Test functions
-void test_mean();
-void test_sd();
-void test_sum();
-void test_median();
+double median(double *, unsigned int);
 
 int main(int argc, char *argv[])
 {
-  test_mean();
-  test_sd();
-  test_sum();
-  test_median();
+  double arr[3] = {1, 2, 3};
+  int n = sizeof(arr) / sizeof(*arr);
+
+  printf("Length: %i\n", n);
+  printf("Mean: %f\n", mean(arr, n));
+  printf("Variance: %f\n", variance(arr, n));
+  printf("Standard deviation: %f\n", sd(arr, n));
+  printf("Sum: %f\n", sum(arr, n));
+  printf("Median: %f\n", median(arr, n));
 }
 
-///
-/// \fn mean(double *data, unsigned int n)
-/// \brief Calculate mean of an array.
-/// \param data The array.
-/// \param n Size of array.
-///
 double mean(double *data, unsigned int n)
 {
   int sum = 0;
@@ -42,32 +32,24 @@ double mean(double *data, unsigned int n)
   return sum / n;
 }
 
-///
-/// \fn sd(double *data, unsigned int n)
-/// \brief Calculate standard deviation of an array.
-/// \param data The array.
-/// \param n Size of array.
-///
-double sd(double *data, unsigned int n)
+double variance(double *data, unsigned int n)
 {
-  int sum = 0;
+  double sum = 0;
   for (int index = 0; index < n; index++)
   {
-    sum += (data[index] - mean(data, n));
+    sum += pow(data[index] - mean(data, n), 2);
   }
-  // FIXME: Something in the SUM loop doesn't work.
-  return sqrt(sum ^ 2 / (n - 1));
+  return sum / n;
 }
 
-///
-/// \fn sum(double *data, unsigned int n, double r)
-/// \brief Calculate sum of an array.
-/// \param data The array.
-/// \param n Size of array.
-///
+double sd(double *data, unsigned int n)
+{
+  return sqrt(variance(data, n));
+}
+
 double sum(double *data, unsigned int n)
 {
-  int sum = 0;
+  double sum = 0;
   for (int index = 0; index < n; index++)
   {
     sum += data[index];
@@ -75,48 +57,18 @@ double sum(double *data, unsigned int n)
   return sum;
 }
 
-///
-/// \fn median(double *data, unsigned int n)
-/// \brief Calculate median of an array.
-/// \param data The array.
-/// \param n Size of array.
-///
-double median(double *data, int size)
+double median(double *data, unsigned int n)
 {
   double median;
 
-  if (size % 2 == 0)
+  if (n % 2 == 0)
   {
-    median = (data[size / 2] + data[(size / 2) - 1]) / 2;
+    median = (data[n / 2] + data[(n / 2) - 1]) / 2;
   }
   else
   {
-    median = data[size / 2];
+    median = data[n / 2];
   }
 
   return median;
-}
-
-int n = 3;
-double arr[3] = {1, 2, 3};
-
-void test_mean()
-{
-  assert(mean(arr, n) == (double)2);
-  assert(mean(arr, n) != 4);
-}
-
-void test_sd()
-{
-  //assert(sd(arr, n) == (double)1);
-}
-
-void test_sum()
-{
-  assert(sum(arr, n) == (double)6);
-}
-
-void test_median()
-{
-  assert(median(arr, n) == (double)2);
 }

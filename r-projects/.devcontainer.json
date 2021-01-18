@@ -1,13 +1,13 @@
 {
-  "name": "r-projects",
-  "dockerComposeFile": [
-    "../docker-compose.yml"
-  ],
-  "settings": {},
-  "service": "r-projects",
-  "extensions": [
-    "ikuyadeu.r"
-  ],
-  "workspaceFolder": "/workspace/r-projects",
-  "postCreateCommand": ""
+	"name": "r-projects",
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"settings": {},
+	"service": "r-projects",
+	"extensions": [
+		"ikuyadeu.r"
+	],
+	"workspaceFolder": "/workspace/r-projects",
+	"postCreateCommand": ""
 }

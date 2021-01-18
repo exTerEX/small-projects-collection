@@ -1,17 +1,22 @@
 version: "3"
 services:
     c-projects:
-        image: gcc:latest
+        image: exterex/cpp-dev
+        volumes:
+            - .:/workspace:cached
+        command: /bin/sh -c "while sleep 1000; do :; done"
+    cpp-projects:
+        image: exterex/cpp-dev
         volumes:
             - .:/workspace:cached
         command: /bin/sh -c "while sleep 1000; do :; done"
     python-projects:
-        image: python:latest
+        image: exterex/python-dev
         volumes:
             - .:/workspace:cached
         command: /bin/sh -c "while sleep 1000; do :; done"
     go-projects:
-        image: golang:latest
+        image: exterex/golang-dev
         volumes:
             - .:/workspace:cached
         command: /bin/sh -c "while sleep 1000; do :; done"

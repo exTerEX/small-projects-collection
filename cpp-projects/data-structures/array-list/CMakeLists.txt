@@ -1,0 +1,1 @@
+add_executable(array_list main.cpp array_list.hpp array_list.cpp)
